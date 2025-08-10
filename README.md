@@ -120,4 +120,45 @@ public class be1002 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1003 - Simple Sum</h4></summary>
+
+**Description:**  
+Read two integer values, in this case, the variables A and B. After this, calculate the sum between them and assign it to the variable **SOMA**. Write the value of this variable.
+
+Calculate the area using the formula given in the problem description.
+
+**Input:**  
+The input file contains 2 integer numbers.
+
+**Output:**
+Print the message "SOMA" with all the capital letters, with a blank space before and after the equal signal followed by the corresponding value to the sum of A and B. Like all the problems, don't forget to print the end of line, otherwise you will receive "Presentation Error"
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1003 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = 0; int b = 0;
+
+        a = sc.nextInt();
+        b = sc.nextInt();
+        sc.close();
+
+        int total = sum(a, b);
+
+        System.out.printf("SOMA = %d\n", total);
+    }
+
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+</details>
 </details>
