@@ -78,4 +78,46 @@ public class be1001 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1002 - ExtrArea of a Circle</h4></summary>
+
+**Description:**  
+The formula to calculate the area of a circumference is defined as **A = π . R2**. Considering to this problem that **π = 3.14159**:
+
+Calculate the area using the formula given in the problem description.
+
+**Input:**  
+The input contains a value of floating point **_(double precision)_**, that is the variable **R**.
+
+**Output:**
+Present the message "A=" followed by the value of the variable, as in the example bellow, with four places after the decimal point. Use all double precision variables. Like all the problems, don't forget to print the end of line after the result, otherwise you will receive "Presentation Error".
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1002 {
+    public static final double PI = 3.14159;
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double radius = 0;
+        radius = sc.nextDouble();
+        sc.close();
+
+        double area = calcCircunferenceArea(radius);
+
+        System.out.printf("A=%.4f\n", area);
+    }
+
+    public static double calcCircunferenceArea(double radius){
+        return PI * (radius * radius);
+    }
+}
+```
+
+</details>
 </details>
