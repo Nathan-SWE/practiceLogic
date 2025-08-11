@@ -243,4 +243,48 @@ public class be1005 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1006 - Average 2</h4></summary>
+
+**Description:**  
+Read three values (variables A, B and C), which are the three student's grades. Then, calculate the average, considering that grade A has weight 2, grade B has weight 3 and the grade C has weight 5. Consider that each grade can go from 0 to 10.0, always with one decimal place.
+
+**Input:**  
+The input file contains 3 values of floating points (double) with one digit after the decimal point.
+
+**Output:**
+Print the message "MEDIA"(average in Portuguese) and the student's average according to the following example, with a blank space before and after the equal signal.
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1006 {
+    public static void main(String[] args) {
+        Scanner sc  = new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        sc.close();
+
+        double average = calcAverage(a, b, c);
+
+        System.out.printf("MEDIA = %.1f\n", average);
+    }
+
+    public static double calcAverage(double a, double b, double c) {
+        double weight2 = 2.0;
+        double weight3 = 3.0;
+        double weight5 = 5.0;
+        double totalWeight = weight2 + weight3 + weight5;
+
+        return ((a * weight2) + (b * weight3) + (c * weight5)) / totalWeight;
+    }
+}
+
+```
+
+</details>
 </details>
