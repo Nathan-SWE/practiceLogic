@@ -287,4 +287,89 @@ public class be1006 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1007 - Difference</h4></summary>
+
+**Description:**  
+Read four integer values named A, B, C and D. Calculate and print the difference of product A and B by the product of C and D (A \* B - C \* D).
+
+**Input:**  
+The input file contains 4 integer values.
+
+**Output:**
+Print **DIFERENCA** (DIFFERENCE in Portuguese) with all the capital letters, according to the following example, with a blank space before and after the equal signal.
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1007 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        sc.close();
+
+        int diference = calcDiference(a, b, c, d);
+
+        System.out.printf("DIFERENCA = %d\n", diference);
+    }
+
+    public static int calcDiference(int a, int b, int c, int d) {
+        return (a*b) - (c*d);
+    }
+}
+```
+
+</details>
+<details>
+<summary><h4>✅ BE1008 - Salary</h4></summary>
+
+**Description:**  
+Write a program that reads an employee's number, his/her worked hours number in a month and the amount he received per hour. Print the employee's number and salary that he/she will receive at end of the month, with two decimal places.
+
+- Don’t forget to print the line's end after the result, otherwise you will receive “Presentation Error”.
+- Don’t forget the space before and after the equal signal and after the U$.
+
+**Input:**  
+The input file contains 2 integer numbers and 1 value of floating point, representing the number, worked hours amount and the amount the employee receives per worked hour.
+
+**Output:**
+Print the number and the employee's salary, according to the given example, with a blank space before and after the equal signal.
+
+**Solution (Java):**
+
+```java
+import java.util.Locale;
+import java.util.Scanner;
+
+public class be1008 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
+
+        int workerNumber = sc.nextInt();
+        int workedHours = sc.nextInt();
+        double amountPerHour = sc.nextDouble();
+        sc.close();
+
+        double monthIncome = calcSalary(workedHours, amountPerHour);
+
+        System.out.printf("NUMBER = %d\n", workerNumber);
+        System.out.printf("SALARY = U$ %.2f\n", monthIncome);
+    }
+
+    public static double calcSalary(int workedHours, double amountPerHour) {
+        return workedHours * amountPerHour;
+    }
+}
+
+```
+
+</details>
 </details>
