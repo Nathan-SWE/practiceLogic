@@ -372,4 +372,50 @@ public class be1008 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1009 - Salary with Bonus</h4></summary>
+
+**Description:**  
+Make a program that reads a seller's name, his/her fixed salary and the sale's total made by himself/herself in the month (in money). Considering that this seller receives 15% over all products sold, write the final salary (total) of this seller at the end of the month , with two decimal places.
+
+- Don’t forget to print the line's end after the result, otherwise you will receive “Presentation Error”.
+
+- Don’t forget the blank spaces.
+- Don’t forget to print the line's end after the result, otherwise you will receive “Presentation Error”.
+- Don’t forget the space before and after the equal signal and after the U$.
+
+**Input:**  
+The input file contains a text (employee's first name), and two double precision values, that are the seller's salary and the total value sold by him/her.
+
+**Output:**
+Print the seller's total salary, according to the given example.
+
+**Solution (Java):**
+
+```java
+import java.util.Locale;
+import java.util.Scanner;
+
+public class be1009 {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Locale.setDefault(Locale.US);
+
+        String name = sc.nextLine();
+        double baseSalary = sc.nextDouble();
+        double monthlySales =  sc.nextDouble();
+        sc.close();
+
+        double finalSalary = calcSalaryBonuses(baseSalary, monthlySales);
+
+        System.out.printf("TOTAL = R$ %.2f\n", finalSalary);
+    }
+    public static double calcSalaryBonuses(double baseSalary, double monthlySales) {
+        return baseSalary + (monthlySales * 0.15);
+    }
+}
+```
+
+</details>
 </details>
