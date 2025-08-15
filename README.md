@@ -418,4 +418,49 @@ public class be1009 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1010 - Simple Calculate</h4></summary>
+
+**Description:**  
+In this problem, the task is to read a code of a product 1, the number of units of product 1, the price for one unit of product 1, the code of a product 2, the number of units of product 2 and the price for one unit of product 2. After this, calculate and show the amount to be paid.
+
+**Input:**  
+The input file contains two lines of data. In each line there will be 3 values: two integers and a floating value with 2 digits after the decimal point.
+
+**Output:**
+The output file must be a message like the following example where "Valor a pagar" means Value to Pay. Remember the space after ":" and after "R$" symbol. The value must be presented with 2 digits after the point.
+
+**Solution (Java):**
+
+```java
+import java.util.Locale;
+import java.util.Scanner;
+
+public class be1010 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
+
+        final int TOTAL_PRODUCTS = 2;
+        double finalValue = 0;
+
+        for (int i = 0; i < TOTAL_PRODUCTS; i++) {
+            finalValue += calcTotalValue(sc);
+        }
+
+        System.out.printf("VALOR A PAGAR: R$ %.2f\n", finalValue);
+        sc.close();
+    }
+    public static double calcTotalValue(Scanner scanner) {
+        int productCode = scanner.nextInt();
+        int quantity = scanner.nextInt();
+        double price = scanner.nextDouble();
+        return quantity * price;
+    }
+}
+
+```
+
+</details>
 </details>
