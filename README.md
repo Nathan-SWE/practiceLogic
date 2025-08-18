@@ -463,4 +463,49 @@ public class be1010 {
 ```
 
 </details>
+
+<details>
+<summary><h4>✅ BE1011 - Sphere</h4></summary>
+
+**Description:**  
+Make a program that calculates and shows the volume of a sphere being provided the value of its radius (R) . The formula to calculate the volume is: (4/3) \* pi \* R³. Consider (assign) for pi the value 3.14159.
+
+Tip: Use (4/3.0) or (4.0/3) in your formula, because some languages (including C++) assume that the division's result between two integers is another integer.
+
+**Input:**  
+The input contains a value of floating point (double precision).
+
+**Output:**
+The output must be a message "VOLUME" like the following example with a space before and after the equal signal. The value must be presented with 3 digits after the decimal point.
+
+**Solution (Java):**
+
+```java
+package javaPractice;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class be1011 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
+
+        final double PI = 3.14159;
+        double radius =  sc.nextDouble();
+        sc.close();
+
+        double sphere = calcSphereVolume(radius, PI);
+
+        System.out.printf("VOLUME = %.3f\n", sphere);
+    }
+
+    public static double calcSphereVolume(double radius, double PI){
+        return (4.0/3.0) * PI * (radius * radius * radius);
+    }
+}
+
+```
+
+</details>
 </details>
