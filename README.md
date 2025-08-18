@@ -481,8 +481,6 @@ The output must be a message "VOLUME" like the following example with a space be
 **Solution (Java):**
 
 ```java
-package javaPractice;
-
 import java.util.Scanner;
 import java.util.Locale;
 
@@ -502,6 +500,77 @@ public class be1011 {
 
     public static double calcSphereVolume(double radius, double PI){
         return (4.0/3.0) * PI * (radius * radius * radius);
+    }
+}
+
+```
+
+</details>
+
+<details>
+<summary><h4>✅ BE1012 - Area</h4></summary>
+
+**Description:**  
+Make a program that reads three floating point values: A, B and C. Then, calculate and show:
+
+- a\) the area of the rectangled triangle that has base A and height C.
+- b\) the area of the radius's circle C. (pi = 3.14159)
+- c\) the area of the trapezium which has A and B by base, and C by height.
+- d\) the area of ​​the square that has side B.
+- e\) the area of the rectangle that has sides A and B.
+
+**Input:**  
+The input file contains three double values with one digit after the decimal point.
+
+**Output:**
+The output file must contain 5 lines of data. Each line corresponds to one of the areas described above, always with a corresponding message (in Portuguese) and one space between the two points and the value. The value calculated must be presented with 3 digits after the decimal point.
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1012 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final double PI = 3.14159;
+
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        sc.close();
+
+        double areaTriangleRetangle = calcAreaTriangleRetangle(a, c);
+        double areaCircle = calcAreaCircle(c, PI);
+        double areaTrapezium = calcAreaTrapezium(a, b, c);
+        double areaSquare = calcAreaSquare(b);
+        double areaRectangle = areaRectangle(a, b);
+
+        System.out.printf("TRIANGULO: %.3f\n", areaTriangleRetangle);
+        System.out.printf("CIRCULO: %.3f\n", areaCircle);
+        System.out.printf("TRAPEZIO: %.3f\n", areaTrapezium);
+        System.out.printf("QUADRADO: %.3f\n", areaSquare);
+        System.out.printf("RETANGULO: %.3f\n", areaRectangle);
+    }
+
+    public static double calcAreaTriangleRetangle(double baseA,double heightB){
+        return  (baseA * heightB) / 2;
+    }
+
+    public static double calcAreaCircle(double radius,double PI){
+        return PI * (radius * radius);
+    }
+
+    public static double calcAreaTrapezium(double baseA,double baseB,double heightC){
+        return (baseA + baseB) *  heightC / 2;
+    }
+
+    public static double calcAreaSquare(double side){
+        return side * side;
+    }
+
+    public static double areaRectangle(double baseA, double heightB){
+        return baseA * heightB;
     }
 }
 
