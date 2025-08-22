@@ -1,3 +1,6 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/Nathan-SWE/practiceLogic?style=for-the-badge)&nbsp;
+![GitHub language count](https://img.shields.io/github/languages/count/Nathan-SWE/practiceLogic?style=for-the-badge)
+
 # Programming Logic Practice
 
 This repository contains my solutions to programming challenges from platforms such as **BeeCrowd**, **HackerRank**, and **LeetCode**.  
@@ -620,6 +623,47 @@ public class be1013 {
     }
 }
 
+
+```
+
+</details>
+
+<details>
+<summary><h4>✅ BE1014 - Consumption</h4></summary>
+
+**Description:**  
+Calculate a car's average consumption being provided the total distance traveled (in Km) and the spent fuel total (in liters).
+
+**Input:**  
+The input file contains two values: one integer value X representing the total distance (in Km) and the second one is a floating point number Y  representing the spent fuel total, with a digit after the decimal point.
+
+**Output:**
+Present a value that represents the average consumption of a car with 3 digits after the decimal point, followed by the message "km/l".
+
+**Solution (Java):**
+
+```java
+import java.util.Scanner;
+
+public class be1014 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int distanceInKm = sc.nextInt();
+        double fuelSpent = sc.nextDouble();
+        sc.close();
+
+        double consumption = calcConsumption(distanceInKm, fuelSpent);
+
+        System.out.printf("%.3f km/l\n", consumption);
+    }
+
+    public static double calcConsumption(int distance, double fuel) {
+        if (fuel > 0) return distance / fuel;
+
+        return 0;
+    }
+}
 
 ```
 
